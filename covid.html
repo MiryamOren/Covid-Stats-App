@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const covidAPI = 'https://corona-api.com/countries';
+    const countryAPI = 'https://restcountries.herokuapp.com/api/v1';
+    // const proxy1 = 'https://cors-proxy.htmldriven.com/?url='; 
+    // const proxy2 = 'https://cors-anywhere.herokuapp.com/';
+    // const proxy3 = 'http://alloworigin.com/get?url='; 
+    // const proxy4 = 'https://httpbin.org/get?url='; 
+    const proxy5 = 'https://api.codetabs.com/v1/proxy/?quest='
+    const proxy6 = 'https://cors.bridged.cc/'
+    
+    async function fetchCovid(){
+      try{
+        const fetchRes = await fetch(covidAPI);
+        const covidObj = await fetchRes.json();
+        console.log(covidObj);
+      }  catch (err) {
+        console.log(err);
+      }
+      
+    }
+    fetchCovid();
+    async function fetchCountry(){
+      // console.log(`${proxy1}${countryAPI}`);
+      try{
+        const fetchRes = await fetch(`${proxy6}${countryAPI}/region/world`); ///region/Oceania
+        const countryObj = await fetchRes.json();
+        console.log(countryObj);
+      }  catch (err) {
+        console.log(err);
+      }
+    }
+    fetchCountry();
+  </script>
+</body>
+</html>
