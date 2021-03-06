@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+body{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+header, body > div{
+  width: calc(100vw - 7rem);
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loading{
+  background: url(../img/covid2.gif) no-repeat center center/cover;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: calc(calc(2rem + 13vh) + calc(30vh - 100px));
+  left: calc(50% - 100px);
+}
+header{
+  height: 13vh;
+  justify-content: center;
+}
+header h1{
+  height: 60%;
+  margin: 0;
+}
+header .icon{
+  height: 8vh;
+  width: 8vh;
+  background: url(../img/merilin1.png)
+  no-repeat center center/cover;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+.country-data{
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 130vh;
+  height: 60vh !important;
+  text-align: center;
+  display: none;
+}
+.country-data h2{
+  height: 2rem;
+}
+.country-data .cards-container{
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.country-data .cards-container .measure-card{
+  background-color: #FF6384;
+  padding: 1rem;
+  margin: 0.2rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+}
+.measure-card h1{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.chart{
+  width: 100%;
+  max-width: 130vh;
+  height: 60vh !important;
+  /* display: none !important; */
+  visibility: hidden;
+  display: block;
+}
+
+button{
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+.covid-measures{
+  max-width: 500px;
+  margin: auto;
+  height: 7vh;
+  visibility: hidden;
+  display: block;
+}
+.covid-measures button{
+  background-color: rgb(255, 99, 132);
+}
+.continents{
+  max-width: 500px;
+  margin: auto;
+  height: 7vh;
+  /* visibility: hidden; */
+}
+.continents button{
+  background-color: #36A2EB;
+}
+.countries{
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.countries button{
+  background-color: #4BC0C0;
+}
