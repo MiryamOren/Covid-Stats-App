@@ -30,10 +30,8 @@ const state = {
           }),
 };
 
-// // initializing
+// initializing
 state.continents = continents;
-
-// document.querySelector('.continents').style.visibility = 'visible';
 continentClick({target : document.querySelector('.world')});
 
 // run
@@ -115,6 +113,11 @@ async function fetchMeasures(){
     const fetchRes = await fetch(request);
     const coutryData = await fetchRes.json();
     currentContinent.countries[countriesNames[i]]['measures'] = coutryData.data.latest_data;
+    delete currentContinent.countries[countriesNames[i]]['measures'].calculated;
+    if (coutryData.data.hasOwnProperty('timeline') && coutryData.data.timeline[0]){
+      currentContinent.countries[countriesNames[i]]['measures']['new confirmed'] = coutryData.data.timeline[0]["new_confirmed"];
+      currentContinent.countries[countriesNames[i]]['measures']['new deaths'] = coutryData.data.timeline[0]["new_deaths"];  
+    }
   }
   currentContinent.measuresFetched = true;
   console.log('fetchMeasures - end');

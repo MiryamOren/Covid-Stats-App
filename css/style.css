@@ -32,7 +32,7 @@ header{
   justify-content: center;
 }
 header h1{
-  height: 60%;
+  height: 50%;
   margin: 0;
 }
 header .icon{
@@ -41,7 +41,7 @@ header .icon{
   background: url(../img/merilin1.png)
   no-repeat center center/cover;
   border-radius: 50%;
-  margin: 0 0.5rem;
+  margin: 0 0.7rem;
 }
 .country-data{
   width: 100%;
@@ -61,6 +61,7 @@ header .icon{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 .country-data .cards-container .measure-card{
   background-color: #FF6384;
@@ -105,7 +106,6 @@ button{
   max-width: 500px;
   margin: auto;
   height: 7vh;
-  /* visibility: hidden; */
 }
 .continents button{
   background-color: #36A2EB;
